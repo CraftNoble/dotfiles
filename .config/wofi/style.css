@@ -1,0 +1,56 @@
+/* --- Temă Wofi aliniată cu Waybar - VARIANTĂ TRANSPARENTĂ --- */
+
+* {
+    font-family: "FiraCode Nerd Font", sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 0;
+}
+
+/* Fereastra Principală */
+window {
+    background-color: rgba(30, 30, 46, 0.6);
+    border: 2px solid #45475a;
+    border-radius: 10px;
+}
+
+/* Câmpul de Introducere a Textului */
+#input {
+    margin: 10px;
+    padding: 8px;
+    /* Am adăugat și aici transparență, dar mai puțină pentru a ieși în evidență */
+    background-color: rgba(49, 50, 68, 0.85);
+    color: #89b4fa;
+    border-radius: 6px;
+}
+
+#inner-box {
+    margin: 0 10px 10px 10px;
+}
+
+#scroll {}
+
+#text {
+    color: #cdd6f4;
+}
+
+/* O intrare individuală în listă - fundalul este transparent de la fereastra principală */
+#entry {
+    padding: 8px;
+    border-radius: 6px;
+    color: #cdd6f4;
+    /* Adăugăm o culoare de fundal transparentă la hover pentru un efect plăcut */
+    background-color: transparent;
+}
+
+/* O intrare selectată */
+#entry:selected {
+    /* Am păstrat o opacitate mare pentru lizibilitate maximă la selecție */
+    background-color: rgba(166, 227, 161, 0.9);
+    color: #1e1e2e;
+}
+
+/* Efect de hover pentru a vedea mai clar pe ce intrare este mouse-ul */
+#entry:hover {
+    background-color: rgba(69, 71, 90, 0.5); /* Culoare subtilă la hover */
+}

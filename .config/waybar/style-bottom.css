@@ -1,0 +1,59 @@
+/* --- Stil pentru Bara de Jos (Bottom Bar) --- */
+
+/* Resetare globală și setări de bază (păstrate pentru consistență) */
+* {
+    border: none;
+    font-family: "FiraCode Nerd Font", sans-serif;
+    font-size: 14px;
+    min-height: 0;
+}
+
+/* Stilul principal al barei (identic cu cel de sus) */
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.3); /* Negru transparent */
+    color: #e0e0e0; /* Culoare text generală */
+    transition-duration: 0.2s;
+}
+
+/* Stil general pentru toate modulele din bara de jos */
+#cpu,
+#memory,
+#temperature,
+#network,
+#window {
+    padding: 0 10px;
+    margin: 0 3px;
+}
+
+/* --- Culori specifice pentru fiecare modul --- */
+
+/* Modulul de rețea (aceeași culoare ca în bara de sus) */
+#network {
+    color: #a6e3a1; /* Verde */
+}
+
+/* Modulul CPU */
+#cpu {
+    color: #f9e2af; /* Galben */
+}
+
+/* Modulul Memorie RAM */
+#memory {
+    color: #94e2d5; /* Turcoaz */
+}
+
+/* Modulul Temperatură */
+#temperature {
+    color: #cba6f7; /* Mov */
+}
+
+/* Stare critică pentru temperatură (aceeași culoare ca la baterie) */
+#temperature.critical {
+    color: #f38ba8; /* Roșu */
+}
+
+/* Modulul pentru fereastra activă (centru) */
+#window {
+    font-weight: bold;
+    color: #f5e0dc; /* O culoare neutră, ușor proeminentă */
+}

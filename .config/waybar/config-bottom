@@ -1,0 +1,78 @@
+{
+    // Poziționare și stil general pentru bara de jos
+    "layer": "top",
+    "position": "bottom",
+    "height": 38,
+    "spacing": 5,
+
+    // Modulele din partea stângă (Resurse Sistem)
+    "modules-left": [
+        "cpu",
+        "memory",
+        "temperature#cpu",
+        "temperature#gpu"
+    ],
+
+    // Modulul central (Fereastra Activă)
+    "modules-center": [
+        "hyprland/window"
+    ],
+
+    // Modulul din dreapta (Rețea)
+    "modules-right": [
+        "hyprland/language",
+	"network"
+    ],
+
+    // --- CONFIGURARE MODULE INDIVIDUALE ---
+
+    "hyprland/language": {
+    	"format": " {short}",
+    	"keyboard-name": "at-translated-set-2-keyboard" // Ajustează dacă e necesar
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50,
+        "separate-outputs": true
+    },
+
+    "cpu": {
+        "format": "󰘚 {usage}%", // Iconiță CPU
+        "tooltip": true,
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "󰍛 {used:0.1f}G/{total:0.1f}G", // Iconiță RAM
+        "interval": 2
+    },
+
+    "network": {
+        "format-wifi": "󰖩 {essid} |  {bandwidthDownBytes} |  {bandwidthUpBytes}",
+        "format-ethernet": "󰈀 Ethernet |  {bandwidthDownBytes} |  {bandwidthUpBytes}",
+        "format-disconnected": "󰖪 Deconectat",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "interval": 2
+    },
+    
+    // --- Temperaturi (Necesită adaptare) ---
+
+    "temperature#cpu": {
+        // Schimbă 'hwmon-path' cu calea corectă pentru senzorul tău CPU
+        "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+        "critical-threshold": 85,
+        "format-critical": "CPU: {temperatureC}°C critical",
+        "format": "CPU: {temperatureC}°C",
+        "interval": 5
+    },
+
+    "temperature#gpu": {
+        // Schimbă 'hwmon-path' cu calea corectă pentru senzorul tău GPU
+        "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "GPU: {temperatureC}°C critical",
+        "format": "GPU: {temperatureC}°C",
+        "interval": 5
+    }
+}

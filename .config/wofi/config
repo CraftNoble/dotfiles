@@ -1,0 +1,32 @@
+# ~/.config/wofi/config
+
+# Modul de funcționare. 'drun' afișează aplicațiile.
+mode=drun
+
+# Permite tastarea pentru a căuta imediat
+allow_images=true
+
+# Sortează în funcție de cât de des le folosești
+sort_order=default
+
+# Lățimea meniului
+width=40%
+
+# Înălțimea meniului
+height=50%
+
+# Afișează în centrul ecranului
+# Poți folosi și: top, bottom, left, right, center
+location=center
+
+# Ascunde bara de scroll
+hide_scroll=true
+
+# Ignoră "case" (majuscule/minuscule) la căutare
+case_sensitive=false
+
+# Numărul de coloane
+columns=1
+
+# Stilul este definit în fișierul style.css
+style=style.css
